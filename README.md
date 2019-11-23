@@ -31,4 +31,4 @@ junit、jacoco、maven
 
 
 171860685-胡天翔，截图：
-	![image-20191124000744.png](https://github.com/2019NJUSAT/White-Box-Testing-/blob/master/IMG/image-20191115210743488.png)
+	![image-20191124000744.png](https://github.com/TianxiangHu/White-Box-Testing-/edit/master/IMG/image-20191124000744.png)
