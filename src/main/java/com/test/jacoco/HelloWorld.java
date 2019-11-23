@@ -28,6 +28,7 @@ public class HelloWorld {
     	}
     	return 0;
     }
+
     public int Method4(int a, int b, int c, int d, float e) {
     	if(a == 0) {
     		return 0;
@@ -39,6 +40,7 @@ public class HelloWorld {
     	e = 1/x;
     	return 0;
     }
+
     public boolean bug(int a) {
     	if(a == 5) return true;
     	return false;
@@ -50,14 +52,49 @@ public class HelloWorld {
     	 * TODO: You need to complete this method to determine whether  a
     	 * triangle is formed or not when given the input edge a, b and c.
     	 */
+    	if (a<=0||b<=0||c<=0)
+    		return false;
+    	if(!((a+b>c)&&(a+c>b)&&(c+b>a)))
+    		return false;
     	return true;
     }
+
     public boolean isBirthday(int year, int month, int day) {
     	/**
     	 * TODO: You need to complete this method to determine whether a 
     	 * legitimate date of birth between 1990/01/01 and 2019/10/01 is 
     	 * formed or not when given the input year, month and day.
     	 */
+    	if (year<1990||year>2019)
+    		return false;
+    	int m31[]={1,3,5,7,8,10,12};
+    	boolean flag=false;
+    	for (int i=0;i<m31.length;i++)
+		{
+			if(month==m31[i])
+			{
+				flag=true;
+				if (day>31||day<1)
+					return false;
+				break;
+			}
+		}
+    	if(!flag) {
+			if (day > 30 || day < 1)
+				return false;
+		}
+    	if (year==2019)
+		{
+			if(month>10)
+				return false;
+			else if(month==10)
+			{
+				if(day>1)
+					return false;
+			}
+			else
+				;
+		}
     	return true;
     	
     }
@@ -67,7 +104,28 @@ public class HelloWorld {
     	 * can calculate the formula: "a op b", the op here can be four basic  
     	 * operation: "+","-","*","/". 
     	 */
-    	double result = 0.0;
+		double result = 0.0;
+    	switch (op) {
+			case '+': {
+				result = a + b;
+				break;
+			}
+			case '-':{
+				result=a-b;
+				break;
+			}
+			case '*':{
+				result=a*b;
+				break;
+			}
+			case '/':{
+				if(b!=0)
+					result=a/b;
+				else
+					result=0;
+			}
+			default:break;
+		}
     	return result;
     }
     

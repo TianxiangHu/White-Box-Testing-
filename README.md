@@ -28,3 +28,7 @@ junit、jacoco、maven
 ## 提交方式
 
 将github链接分享给助教，在README里截图最后的html报告
+
+
+171860685-胡天翔，截图：
+	![image-20191124000744.png](https://github.com/2019NJUSAT/White-Box-Testing-/blob/master/IMG/image-20191115210743488.png)
